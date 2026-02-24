@@ -1,0 +1,15 @@
+/*#include<stdio.h>
+
+int main()
+{
+    int a = 10;
+    int n[a];
+
+    printf("Array size = %d", a);
+    return 0;
+}*/
+----------
+int b;
+int n[b=10];
+-------------
+what we write in the double float 

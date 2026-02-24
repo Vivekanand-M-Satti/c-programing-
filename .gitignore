@@ -1,0 +1,118 @@
+# ==================================================
+#                C PROJECT .gitignore
+# ==================================================
+
+# =========================
+# Compiled C / C++ Files
+# =========================
+*.out
+*.exe
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.dylib
+*.lib
+
+# Executable without extension (Linux/Mac)
+main
+a.out
+
+# =========================
+# Debug Symbols
+# =========================
+*.gdb
+*.pdb
+*.idb
+
+# =========================
+# Log Files
+# =========================
+*.log
+
+# =========================
+# Temporary / Swap Files
+# =========================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+*.bak
+
+# =========================
+# Build Folders
+# =========================
+build/
+dist/
+bin/
+Debug/
+Release/
+cmake-build-*/
+
+# =========================
+# CMake
+# =========================
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+compile_commands.json
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# CodeBlocks
+# =========================
+*.layout
+*.depend
+
+# =========================
+# CLion / IntelliJ
+# =========================
+.idea/
+
+# =========================
+# Visual Studio
+# =========================
+.vs/
+*.vcxproj.user
+
+# =========================
+# macOS
+# =========================
+.DS_Store
+
+# =========================
+# Windows
+# =========================
+Thumbs.db
+desktop.ini
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+config.h
+secrets.txt
+*.key
+
+# =========================
+# Coverage Files
+# =========================
+*.gcda
+*.gcno
+*.gcov
+
+# =========================
+# Archive Files
+# =========================
+*.zip
+*.tar
+*.gz
+*.rar

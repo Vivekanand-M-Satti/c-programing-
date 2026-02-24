@@ -1,0 +1,172 @@
+///WAPusingadowhileloopthattakesanintegerNfromtheuserandprintsallnumbersfrom1toN
+
+#include <stdio.h>
+
+int main()
+{
+    int N, i = 1;
+
+    printf("Enter N: ");
+    scanf("%d", &N);
+
+    if (N >= 1)
+    {
+        do
+        {
+            printf("%d\n", i);
+            i++;
+        } 
+        while (i <= N);
+    }
+    else
+    {
+        printf("N must be greater than or equal to 1.");
+    }
+
+    return 0;
+}
+
+// ///--------------------------. Createamenu-drivenprogramusingdowhilewheretheusercanselect:------------
+#include<stdio.h>
+
+int main()
+{
+    int choice;
+
+    do
+    {
+        printf("\n1.Start\n");
+        printf("2.Stop\n");
+        printf("3.Exit\n");
+        printf("Enter choice: ");
+        scanf("%d",&choice);
+
+        if(choice == 1)
+        {
+            printf("Started\n");
+        }
+        else if(choice == 2)
+        {
+            printf("Stopped\n");
+        }
+        else if(choice == 3)
+        {
+            printf("Exiting..\n");
+        }
+        else
+        {
+            printf("Invalid choice\n");
+        }
+
+    } while(choice != 3);
+
+    return 0;
+}
+
+
+//                -----Keepaskingtheusertoenterthepassworduntilthecorrectone(e.g.,1234)isentered---
+#include<stdio.h>
+
+int main()
+{
+    int password;
+
+    do
+    {
+        printf("Enter password: ");
+        scanf("%d", &password);
+
+        if(password != 1234)
+        {
+            printf("Incorrect password. Try again.\n");
+        }
+
+    } while(password != 1234);
+
+    printf("Access granted.");
+
+    return 0;
+}
+////-----------------------------                ----------------- SumofDigit-------------
+
+#include<stdio.h>
+
+int main()
+{
+    int n, digit, sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    do
+    {
+        digit = n % 10;   // get last digit
+        sum = sum + digit;
+        n = n / 10;       // remove last digit
+    }
+    while(n > 0);
+
+    printf("Sum of digits: %d", sum);
+
+    return 0;
+}
+
+
+
+//---------------------                             -Write a program that repeatedly asks the user to enter a positive number. Stop only when a valid
+positive number is entered.
+#include<stdio.h>
+
+int main()
+{
+    int num;
+
+    do
+    {
+        printf("Enter a positive number: ");
+        scanf("%d", &num);
+
+    } while(num < 0);   // repeat if number is 0 or negative
+
+    printf("You entered: %d", num);
+
+    return 0;
+}
+
+
+//------------------------------------------------------- printinng the even number by without using the modulo----------------
+#include<stdio.h>
+
+int main()
+{
+    int i = 2;
+
+    do
+    {
+        printf("%d ", i);
+        i += 2;
+    } 
+    while(i <= 10);
+
+    return 0;
+}
+//-------------------------------------------------------printing the even numbeer by using the if condition and the modulo-------------
+#include<stdio.h>
+
+int main()
+{
+    int i;
+
+    for(i = 1; i <= 10; i++)
+    {
+        if(i % 2 == 0)
+        {
+            printf("%d ", i);
+        }
+    }
+
+    return 0;
+}
+
+
+
