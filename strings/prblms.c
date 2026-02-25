@@ -322,31 +322,32 @@ int main()
     printf("%s",st);
 }*/
 //-----------------------------------remove the word fromm the string --------------------------
-#include<stdio.h>
-void removeword(char str[],char strr[])
-{
-    int k;
-     for (int i=0;str[i]!='\0';i++)
-     {
-        for(int j=0;strr[j]!=0;j++)
-        {
-            if(str[i]==strr[j])
-            {
-                for(int k=0;str[k]!=0;k++)
-                {
-                    str[k]=str[k+1];
-                }
-                str[k]='\0';
-            }
-        }
+// #include<stdio.h>
+// void removeword(char str[],char strr[])
+// {
+//     int k;
+//      for (int i=0;str[i]!='\0';i++)
+//      {
+//         for(int j=0;strr[j]!=0;j++)
+//         {
+//             if(str[i]==strr[j])
+//             {
+//                 for(int k=0;str[k]!=0;k++)
+//                 {
+//                     str[k]=str[k+1];
+//                 }
+//                 str[k]='\0';
+//             }
+//         }
 
-     }
-     printf("%s",str);
-}
-int main()
-{
-    char str[]="hello my name is vivek and im boy ";
-    char strr[10];
-    scanf("%s",strr);
-    removeword(str,strr);
-}
+//      }
+//      printf("%s",str);
+// }
+// int main()
+// {
+//     char str[]="hello my name is vivek and im boy ";
+//     char strr[10];
+//     scanf("%s",strr);
+//     removeword(str,strr);
+// }
+// ---------------------------------------------------------------
