@@ -328,7 +328,7 @@ void removeword(char str[],char strr[])
     int k;
      for (int i=0;str[i]!='\0';i++)
      {
-        for(int j=0;str[j]!=0;j++)
+        for(int j=0;strr[j]!=0;j++)
         {
             if(str[i]==strr[j])
             {
