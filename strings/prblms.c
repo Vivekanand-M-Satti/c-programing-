@@ -350,4 +350,57 @@ int main()
 //     scanf("%s",strr);
 //     removeword(str,strr);
 // }
-// ---------------------------------------------------------------
+// ---------------------------------------------------------------BINARY STRING TO THE DECIMAL NUMBER----------------------
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     int i;
+// char str1[6]="hello";
+// char str2[]="world";
+
+// int size=sizeof(str1)+sizeof(str2);
+// char res[size];
+// for( i=0;i<size/2;i++)
+// {
+//     res[i]=str1[i];
+//     res[strlen(str1)+1]=' ';
+//     res[size/2+i]=str2[i];
+//     //res[size]='\0';
+// }
+// //res[strlen(str1)+1]=' ';
+//  res[i]='\0';
+// printf("%s",res);
+// }
+//---------------------------------------------addition of the two strings with the space and the null charechter 
+/*#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[] = "hello";
+    char str2[] = "world";
+    int len1 = strlen(str1), len2 = strlen(str2);
+    int i, j = 0;
+    char res[len1 + len2 + 2]; 
+
+    for (i = 0; i < len1 + len2 + 1; i++) {
+        if (i < len1) {
+            res[i] = str1[i];
+        } else if (i == len1) {
+            res[i] = ' ';
+        } else {
+            res[i] = str2[j++];
+        }
+    }
+    res[i] = '\0';
+
+    printf("%s\n", res);
+    return 0;
+}*/
+//-----------------------------------------------------reverse the array by using the recursion----------------------------
+#include<stdio.h>
+#include<string.h>
+ void reverse(char str[],int start,int end)
+ {
+    
+ }
