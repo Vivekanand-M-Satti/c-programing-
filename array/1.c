@@ -257,21 +257,74 @@ int main ()
                }
             }
    
-    }*/ // ------------------------------largest number in the array 
+    }*/
+   //-------------------------------------------------remove the duplicate the number--------------------
+//    #include<stdio.h>
+// int main()
+// {
+//     int size,j,k,i;
 
+//     printf("Enter array size:");
+//     scanf("%d",&size);
 
-    #include<stdio.h>
-    int main()
+//     int a[size];
+
+//     printf("Enter the elements:");
+//     for(i=0;i<size;i++)
+//     {
+//         scanf("%d",&a[i]);
+//     }
+
+//     for(i=0;i<size;i++)
+//     {
+//         for(j=i+1;j<size;j++)
+//         {
+//             if(a[i]==a[j])
+//             {
+//                 for(k=j;k<size-1;k++)
+//                 {
+//                     a[k]=a[k+1];
+//                 }
+//                 size--;
+//                 j--;
+//             }
+//         }
+//     }
+
+//     printf("Unique array elements: ");
+//     for(i=0;i<size;i++)
+//     {
+//         printf("%d ",a[i]);
+//     }
+// } 
+#include<stdio.h>
+int main()
+{
+    int size,i,j,k;
+    scanf("%d",&size);
+    int arr[size];
+    for(i=0;i<size;i++)
     {
-        int size,i;
-        printf("ennter the size");
-        scanf("%d",&size);
-        int arr[size],large=arr[0];
-        for(i=0;i<size;i++)
+    scanf("%d",&arr[i]);
+    }
+    for ( i=0;i<size;i++)
+    {
+        for (j=i+1;j<size;j++)
         {
-            if(arr[i]) 
+            if(arr[i]==arr[j])
+            {
+                for(k=j;k<size-1;k++)
+                {
+                    arr[k]=arr[k+1];
+                }
+                size--;
+                j--;
+            }
         }
     }
-    )
-   
- 
+    for (i=0;i<size;i++)
+    {
+        printf("%d",arr[i]);
+    }
+
+}
