@@ -398,9 +398,40 @@ int main() {
     return 0;
 }*/
 //-----------------------------------------------------reverse the array by using the recursion----------------------------
-#include<stdio.h>
-#include<string.h>
- void reverse(char str[],int start,int end)
- {
-    
- }
+// #include <stdio.h>
+// #include <string.h>
+
+// int main()
+// {
+//     char str[100];
+
+//     printf("Enter the string: ");
+//     scanf("%[^\n]", str);
+
+//     int len = strlen(str);
+//     int end = len - 1;
+
+//     printf("Reversed string: ");
+
+//     for(int i = len - 1; i >= 0; i--)
+//     {
+//         if(str[i] == ' ')
+//         {
+//             for(int j = i + 1; j <= end; j++)
+//             {
+//                 printf("%c", str[j]);
+//             }
+//             printf(" ");
+//             end = i - 1;
+//         }
+//         else if(i == 0)
+//         {
+//             for(int j = i; j <= end; j++)
+//             {
+//                 printf("%c", str[j]);
+//             }
+//         }
+//     }
+
+//     return 0;
+// }
