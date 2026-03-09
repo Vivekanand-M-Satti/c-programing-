@@ -49,9 +49,9 @@ int main()
        }
        for(int k=0;k<size;k++)
        {
-        for(int j=0;j<size;j++)
+        for(int j=k+1;j<size;j++)
         {
-           if (arr[k]<arr[j])
+           if (arr[k]>arr[j])
            {
             temp=arr[k];
             arr[k]=arr[j];
