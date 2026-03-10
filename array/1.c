@@ -64,7 +64,7 @@ int main ()
 {
     int i,sum=0,avg=0;
     int marks[5];
-    printf("enter the 5 elements");
+    printf("enter the 5 elements"); 
     for(i=0;i<5;i++)
     {
         scanf("%d",&marks[i]);

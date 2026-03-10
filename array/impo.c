@@ -36,6 +36,7 @@
 // //     printf("Smallest: %d", smallest);
 // //     printf("\n");
 // // }
+// greater and the smallest 
 // #include<stdio.h>
 // int main()
 // {
@@ -68,6 +69,7 @@
 //        }
 
 // }
+//---------------------------------duplicate the number 
 // #include<stdio.h>
 // int main()
 // {
@@ -94,3 +96,46 @@
 //       }
 //    }
 // }
+//---------------------------------------finding the 3 largest without modifying ---------
+// #include<stdio.h>
+// int main()
+// {
+//     int st,nd,rd,i,j,size,k;
+//     st=nd=rd=0;
+//     scanf("%d",&size);
+//     int arr[size];
+//     for(int i=0;i<size;i++)
+//     {
+//         scanf("%d",&arr[i]);
+//     }
+//     for(i=0;i<size;i++)
+//     {
+//         for(k=0;k<size;k++)
+//         {
+//             if(arr[i]>st)
+//             {
+//                 rd=nd;
+//                 nd=st;
+//                 st=arr[i];
+//             }
+//             else if(arr[i]>nd&&arr[i]<st)
+//             {
+//                 rd=nd;
+//                 nd=arr[i];
+//             }
+//             else if(arr[i]>rd&&arr[i]!=nd&&arr[i]<st)
+//             {
+//                 rd=arr[i];
+//             }
+//         }
+//     }
+//     printf("%d\t",rd);
+//     printf("%d",nd);
+// }
+#include<stdio.h>
+int main()
+{
+    int n,s;
+    printf("%d",scanf("%d",&n));
+    
+}
