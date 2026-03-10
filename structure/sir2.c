@@ -32,24 +32,53 @@
 //     struct student s={10,"vivek","belagavi"};
 // }
 //--------------------------------------------------array of structure --------
+// #include<stdio.h>
+// struct student
+// {
+//   int id;
+//   char name[49];
+//   char  address[90];
+// };
+// void print(struct student s[])
+// {
+//     printf("%d\n %s\n %s\n",s->id,s->name,s->address);
+// }
+// //void read (sturct student * )
+// int main()
+// {
+//     struct student s[5];
+//     for(int i=0;i<5;i++)
+//     {
+//         scanf("%d %s %s",&s[i].id,s[i].name,s[i].address);
+//         print(s);
+//     }
+// }
+//
+//---------------------------------------------------nested structure -----------
 #include<stdio.h>
+struct address
+{
+   char addresss[30];
+   int zip;
+    
+};
 struct student
 {
-  int id;
-  char name[49];
-  char  address[90];
+    char name[20];
+    int roll;
+    struct address add;
+    
 };
-void print(struct student s[])
-{
-    printf("%d\n %s\n %s\n",s->id,s->name,s->address);
-}
-//void read (sturct student * )
 int main()
 {
-    struct student s[5];
-    for(int i=0;i<5;i++)
-    {
-        scanf("%d %s %s",&s[i].id,s[i].name,s[i].address);
-        print(s);
-    }
+    struct student stud1={"VIVEK",69,"BELAGVAI",1234};
+    printf("%s\n %d\n %s\n %d\n",stud1.name, stud1.roll, stud1.add.addresss, stud1.add.zip);
+    struct student stud2;
+    scanf("%s",stud2.name);
+    scanf("%d",&stud2.roll);
+    scanf("%s",stud2.add.addresss);
+    scanf("%d",&stud2.add.zip);
+    printf("%s\n %d\n %s\n %d\n", stud2.name, stud2.roll, stud2.add.addresss, stud2.add.zip);
+    printf("%zu\t %zu",sizeof(struct student),sizeof(struct address));// check this after .
+    
 }
