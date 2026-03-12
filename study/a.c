@@ -40,7 +40,9 @@
 
 int main()
 {
-    int a;
-    int a=a9;
-    printff("%d",a);
+   // int a;
+    int a=9,*ptr=&a;
+    ++a;
+    (*ptr)++;
+    printf("%d\t%d\t%d\t%d\t",a++,*ptr,a++,a++);
 }

@@ -55,30 +55,32 @@
 // }
 //
 //---------------------------------------------------nested structure -----------
-#include<stdio.h>
-struct address
-{
-   char addresss[30];
-   int zip;
+ #include<stdio.h>
+// struct address
+// {
+//    char addresss[29];
+//    double zip;
     
-};
+// };
 struct student
 {
-    char name[20];
+    char name[17];
     int roll;
-    struct address add;
+    char nn[17];
+    int g;
+    //struct address add;
     
 };
 int main()
 {
     struct student stud1={"VIVEK",69,"BELAGVAI",1234};
-    printf("%s\n %d\n %s\n %d\n",stud1.name, stud1.roll, stud1.add.addresss, stud1.add.zip);
+    //printf("%s\n %d\n %s\n %d\n",stud1.name, stud1.roll, stud1.add.addresss, stud1.add.zip);
     struct student stud2;
-    scanf("%s",stud2.name);
-    scanf("%d",&stud2.roll);
-    scanf("%s",stud2.add.addresss);
-    scanf("%d",&stud2.add.zip);
-    printf("%s\n %d\n %s\n %d\n", stud2.name, stud2.roll, stud2.add.addresss, stud2.add.zip);
-    printf("%zu\t %zu",sizeof(struct student),sizeof(struct address));// check this after .
+    // scanf("%s",stud2.name);
+    // scanf("%d",&stud2.roll);
+    // scanf("%s",stud2.add.addresss);
+    // scanf("%d",&stud2.add.zip);
+    // printf("%s\n %d\n %s\n %d\n", stud2.name, stud2.roll, stud2.add.addresss, stud2.add.zip);
+    printf("%zu\t",sizeof(struct student));// check this after .
     
 }
