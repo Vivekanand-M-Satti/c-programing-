@@ -36,13 +36,13 @@ int main()
     { 
         if(i==0)
         continue;
-        printf("hi");
+        //printf("hi");
 
-        arr[i]=arr[i]+arr[i+1];
+        arr[i]=arr[i-1]+arr[i];
     }
      for(int i=0;i<6;i++)
     {
-      printf("%d ",rr[i]);
+      printf("%d ",arr[i]);
     }
     
 }
