@@ -84,62 +84,101 @@ int main()
     
 }
     #endif
-    #include <stdio.h>
-#include<string.h>
+//     #include <stdio.h>
+// #include<string.h>
 
-void itoaa(int num, char *s)
-{
-    int i=0,len,temp,flag=0;
+// void itoaa(int num, char *s)
+// {
+//     int i=0,len,temp,flag=0;
 
-    if(num<0)
-    {
-        s[i]='-';
-        num=-num;
-        i++;
-        flag=1;
-    }
+//     if(num<0)
+//     {
+//         s[i]='-';
+//         num=-num;
+//         i++;
+//         flag=1;
+//     }
 
-    while(num!=0)
-    {
-        s[i++]=num%10+'0';
-        num=num/10;
-    }
+//     while(num!=0)
+//     {
+//         s[i++]=num%10+'0';
+//         num=num/10;
+//     }
 
-    s[i]='\0';
-    len=strlen(s);
+//     s[i]='\0';
+//     len=strlen(s);
 
-    if(flag==1)
-    {
-        for(int j=1;j<len/2+1;j++)
-        {
-            temp=s[j];
-            s[j]=s[len-j];
-            s[len-j]=temp;
-        }
-    }
-    else
-    {
-        for(int j=0;j<len/2;j++)
-        {
-            temp=s[j];
-            s[j]=s[len-j-1];
-            s[len-j-1]=temp;
-        }
-    }
-}
+//     if(flag==1)
+//     {
+//         for(int j=1;j<len/2+1;j++)
+//         {
+//             temp=s[j];
+//             s[j]=s[len-j];
+//             s[len-j]=temp;
+//         }
+//     }
+//     else
+//     {
+//         for(int j=0;j<len/2;j++)
+//         {
+//             temp=s[j];
+//             s[j]=s[len-j-1];
+//             s[len-j-1]=temp;
+//         }
+//     }
+// }
 
+// int main()
+// {
+//     int num;
+//     char str[200];
+
+//     if(scanf("%d", &num))
+//     {
+//        itoaa(num,str);
+//        printf("Integer to string is %s",str);
+//     }
+//     else
+//     {
+//         printf("Integer to string is 0");
+//     }
+// }
+//------------------------------------------------NRPS OF THE STRING NON REPEATING PERMUTATOIN STRING-----------------
+#include<stdio.h>
 int main()
 {
-    int num;
-    char str[200];
+    int c,k,temp;
+    printf("enter the number of the charecters");
+    scanf("%d %d",&c,&k);
+    char str[c];
+    scanf("%s",str);
+    for(int i=0;i<c;i++)
+    {
+        for(int j=i+1;j<c;j++)
+        {
+            if(str[i]==str[j])
+            {
+                printf("Error o mav");
+                break;
+            }
+        }
+    }
+    for(int i=0;i<k;i++)
+    {
+        printf("%c",str[i%c]);
+        if(i%c==c-1)
+        {
+            printf("\n");
 
-    if(scanf("%d", &num))
-    {
-       itoaa(num,str);
-       printf("Integer to string is %s",str);
+            temp=str[0];
+            for(int j=0;j<c-1;j++)
+            {
+                
+                str[j]=str[j+1];
+
+            }
+            str[c-1]=temp;
+        }
     }
-    else
-    {
-        printf("Integer to string is 0");
-    }
+    
 }
