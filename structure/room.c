@@ -138,7 +138,7 @@ struct school
 int main()
 {
     struct school s1;
-
+    
     // Input student info
     printf("Enter student roll and name:\n");
     scanf("%d", &s1.student.roll);
