@@ -149,7 +149,7 @@ int main()
     scanf("%d", &s1.faculty.id);
     scanf(" %[^\n]", s1.faculty.name);
 
-    // Print info
+    // Print
     printf("\nStudent info:\n");
     printf("Roll: %d\n", s1.student.roll);
     printf("Name: %s\n", s1.student.name);
