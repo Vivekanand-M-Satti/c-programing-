@@ -29,4 +29,4 @@ int main()
     
     
    printf("average is %d %d %d ",summ/n ,sump/n , sumc/n); 
-}
+} 
