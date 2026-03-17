@@ -21,20 +21,34 @@
 
 //}
 //----------------------------------read and the print the file by using thee while loop========
+// #include<stdio.h>
+// int main()
+// {
+//     FILE* ptr=fopen("new.txt","r");
+//     if(ptr==NULL)
+//     {
+//         printf("hu mav atta kelsa");
+//         return 0;
+//     }
+//     else
+//     {
+//         char ch ;
+//         while ((ch= fgetc(ptr))!=EOF)
+//         printf("%c",ch);
+//     }
+//     fclose(ptr);
+// }
+//-------------------------------------read and creat the file and copyy the info present in that file to another file
 #include<stdio.h>
 int main()
 {
-    int* ptr=fopen("new.txt","r");
-    if(ptr==NULL)
+    FILE*ptr1,*ptr2;
+    ptr1=fopen("new.txt","r");
+    ptr2=fopen("cpy.txt","w");
+    char ch;
+    while((ch=getc(ptr1))!=EOF)
     {
-        printf("hu mav atta kelsa");
-        return 0;
+          putc(ch,ptr2);
     }
-    else
-    {
-        char ch ;
-        while ((ch= fgetc(ptr))!=EOF)
-        printf("%c",ch);
-    }
-    fclose(ptr);
+    printf("success");
 }
