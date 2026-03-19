@@ -36,6 +36,7 @@
 
 // }
 // }
+//
 #include <stdio.h>
 
 int main()
@@ -45,4 +46,4 @@ int main()
     ++a;
     (*ptr)++;
     printf("%d\t%d\t%d\t%d\t",a++,*ptr,a++,a++);
-}
+}  
