@@ -37,9 +37,7 @@
 // }
 // }
 //
-#include <stdio.h>
-
-
+#include <stdio.h>//hwllo mav yn madati
 int main()
 {
    // int a;
