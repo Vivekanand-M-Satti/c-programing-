@@ -93,16 +93,43 @@
 
 //     fclose(fp);
 // }
-#include<stdio.h>
+// #include<stdio.h>
+// int main()
+
+// {
+//     FILE* ptr=fopen("new.txt","w");
+//     int ch;
+//     ch=fgetc(ptr);
+//     if(ferror(ptr))
+//     printf("hu mav");
+//     clearerr(ptr);
+//     if(ferror(ptr))
+//     printf("hu mav");
+    
+// }
+#include <stdio.h>
+
 int main()
 {
-    FILE* ptr=fopen("new.txt","w");
-    int ch;
-    ch=fgetc(ptr);
-    if(ferror(ptr))
-    printf("hu mav");
-    clearerr(ptr);
-    if(ferror(ptr))
-    printf("hu mav");
-    
+    FILE *fp = fopen("new.txt", "r");
+    char ch;
+
+    while ((ch = fgetc(fp)) != EOF)
+        putchar(ch);
+
+    // Now EOF reached
+    if (feof(fp))
+        printf("\nEOF reached\n");
+
+    clearerr(fp);  // RESET
+
+    if (!feof(fp))
+        printf("EOF cleared!\n");
+         
+        ch=fgetc(fp);//learerr only resets the error and EOF flags, but it doesn't change the file position.When you call 
+        //clearerr(fp), it clears the EOF flag, allowing further I/O operations on the file. However, the file position remains 
+        //at the end of the file (EOF).
+        printf("%c",ch);// it print any charecter of the EOF
+
+    fclose(fp);
 }
