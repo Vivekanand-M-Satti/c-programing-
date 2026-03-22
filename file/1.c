@@ -53,16 +53,56 @@
 //     printf("success");
 // }
 
+// #include<stdio.h>
+// int main()
+// {
+//     FILE*ptr=fopen("new.txt","r");// while printing like the stdout and the cpying to another file we cannot use the write mode bcs 
+//     // it erase every thing what is before ..
+//     char ch;
+//     while(ch=fgetc(ptr))
+//     {
+//         if(feof(ptr))// feof is the idicator that indicator that sure whre char ch is contains is EOF or not ;
+//         break;
+//         fputc(ch,stdout);
+//     }
+// }
+//
+//
+
+/////////////////////////////////////// p of the clearerr function by clearing the EOF 
+// #include <stdio.h>
+
+// int main()
+// {
+//     FILE *fp = fopen("new.txt", "r");
+//     char ch;
+
+//     while ((ch = fgetc(fp)) != EOF)
+//         putchar(ch);
+
+//     // Now EOF reached
+//     if (feof(fp))
+//         printf("\nEOF reached\n");
+//         if(ferror(fp))
+//         printf("hi mav");// not print becouse eof is not the error so give the the flase in the if condtion
+
+//     clearerr(fp);  // RESET
+
+//     if (!feof(fp))
+//         printf("EOF cleared!\n");
+
+//     fclose(fp);
+// }
 #include<stdio.h>
 int main()
 {
-    FILE*ptr=fopen("new.txt","r");// while printing like the stdout and the cpying to another file we cannot use the write mode bcs 
-    // it erase every thing what is before ..
-    char ch;
-    while(ch=fgetc(ptr))
-    {
-        if(feof(ptr))// feof is the idicator that indicator that sure whre char ch is contains is EOF or not ;
-        break;
-        fputc(ch,stdout);
-    }
+    FILE* ptr=fopen("new.txt","w");
+    int ch;
+    ch=fgetc(ptr);
+    if(ferror(ptr))
+    printf("hu mav");
+    clearerr(ptr);
+    if(ferror(ptr))
+    printf("hu mav");
+    
 }
