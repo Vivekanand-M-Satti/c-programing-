@@ -56,7 +56,8 @@
 #include<stdio.h>
 int main()
 {
-    FILE*ptr=fopen("new.txt","r");
+    FILE*ptr=fopen("new.txt","r");// while printing like the stdout and the cpying to another file we cannot use the write mode bcs 
+    // it erase every thing what is before ..
     char ch;
     while(ch=fgetc(ptr))
     {
