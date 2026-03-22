@@ -39,17 +39,29 @@
 //     fclose(ptr);
 // }
 //-------------------------------------read and creat the file and copyy the info present in that file to another file
+// #include<stdio.h>
+// int main()
+// {
+//     FILE*ptr1,*ptr2;
+//     ptr1=fopen("new.txt","r");
+//     ptr2=fopen("cpy.txt","w");
+//     char ch;
+//     while((ch=getc(ptr1))!=EOF)
+//     {
+//           putc(ch,ptr2);
+//     }
+//     printf("success");
+// }
+
 #include<stdio.h>
 int main()
 {
-    FILE*ptr1,*ptr2;
-    ptr1=fopen("new.txt","r");
-    ptr2=fopen("cpy.txt","w");
+    FILE*ptr=fopen("new.txt","r");
     char ch;
-    while((ch=getc(ptr1))!=EOF)
+    while(ch=fgetc(ptr))
     {
-          putc(ch,ptr2);
+        if(feof(ptr))// feof is the idicator that indicator that sure whre char ch is contains is EOF or not ;
+        break;
+        fputc(ch,stdout);
     }
-    printf("success");
 }
-
