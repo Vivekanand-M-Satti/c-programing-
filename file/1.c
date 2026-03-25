@@ -137,7 +137,11 @@
 #include<stdio.h>
 int main()
 {
-    char ch=-1;
-    printf("%c",ch);
-}
+    while(1)
+    {
+
+    
+    printf("hello");
+    sleep(1);
+    }
 }
