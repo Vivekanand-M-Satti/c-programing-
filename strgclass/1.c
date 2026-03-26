@@ -41,7 +41,7 @@
 //     {
 //         printf("%d",i);
 //     }
-//     printf("%d",i);// the ans of this is the error : re-deffination or the re declaration of the i as the int int two times
+//     printf("%d",i);// the ans of this is the error : re-deffination or the re dclaration of the i as the int int two times
 // }
 #include <stdio.h>
 int main()
