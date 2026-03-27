@@ -238,15 +238,14 @@
 // }
 //--------------------------------example 23
 #include <stdio.h>
-auto int x;
+int x = 10;
 int foo()
 {
 printf("x %d\n", x);
-return ++x;
+return 0;
 }
 int main()
 {
 foo();
-printf("x %d\n", x);
 return 0;
 }
