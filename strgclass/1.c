@@ -237,15 +237,29 @@
 // return 0;
 // }
 //--------------------------------example 23
-#include <stdio.h>
-int x = 10;
-int foo()
-{
-printf("x %d\n", x);
-return 0;
-}
-int main()
-{
-foo();
-return 0;
-}
+// #include <stdio.h>
+// int x = 10;
+// int foo()
+// {
+// printf("x %d\n", x);//  it is true bcs it is global variable 
+// return 0;
+// }
+// int main()
+// {
+// foo();
+// return 0;
+// }
+//----------------------------example 24 
+// #include <stdio.h>
+// int x = 10;/// it takee only one time intialization in the program 
+// int x;// ignore the this line bcs it already defined 
+// int foo()
+// {
+// printf("x %d\n", x);// prints the 10;
+// return 0;
+// }
+// int main()
+// {
+// foo();
+// return 0;
+// }
