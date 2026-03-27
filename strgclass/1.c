@@ -263,3 +263,20 @@
 // foo();
 // return 0;
 // }
+// ------------------------exampple 25
+// #include <stdio.h>
+// int x = 10;// real defintion
+// int x = 20;// another real defiantion it not take the global variable 
+// //WHY --->Because C does not allow ambiguity in definition A variable must have exactly ONE definition
+// //AMBIGUITY ------> MORE  THEN ONE POSSIBILITY MEANING IT UN CLEARE AND CAUSE THE CONFUSION 
+// int foo()
+// {
+// printf("x %d\n", x);//int x; is a tentative definition and gets ignored if a real definition already exists, but int x = 20;
+// // is a full definition, so having two such definitions causes a conflict and results in an error.
+// return 0;
+// }
+// int main()
+// {
+// foo();
+// return 0;
+// }
