@@ -43,14 +43,210 @@
 //     }
 //     printf("%d",i);// the ans of this is the error : re-deffination or the re dclaration of the i as the int int two times
 // }
+//------------------------------------------------example 09
+// #include <stdio.h>
+// int main()
+// {
+// register int i = 0;
+// scanf("%d", &i);// HERE IT IS  shows the error bcs of the Why error happens?
+// // register tells the compiler:
+// // “Store this variable in CPU register (not in RAM) if possible”
+// // Registers do NOT have a memory address you can access
+// printf("i %d\n", i);
+// return 0;
+// }
+//-----------------------------------------------------example 10
+// #include <stdio.h>
+// int main()
+// {
+// register int i = 10;
+// register int *j = &i;//same here also we can access the address of the register variable
+// printf("*j %d\n", *j);
+// return 0;
+// }
+//-----------------------------------------------------example 11
+
+// #include <stdio.h>
+// int main()
+// {
+// int i = 10;
+// register int *j = &i;
+// printf("*j %d\n", *j);// is  right out put is 10 
+// //You cannot take address of a register variable, But you can store an  address of the local variable inside a register variable
+// return 0;
+// }
+//-----------------------------------------------------ex 12 
+// #include <stdio.h>
+// int *foo()
+// {
+// static int i = 10;
+// int *j = &i;
+// return j;
+// }
+// int main()
+// {
+// int *i;
+// i = foo();
+// printf("*i %d\n", *i);// true it prints the value  bcs static is life time is end of the prgram thats why
+// return 0;
+// }
+//---------------------------------------------------ex 13 
+// #include <stdio.h>
+// char *foo()
+// {
+// static char ca[12] = "Hello World";
+// return ca;
+// }
+// int main()
+// {
+// char *ca;
+// ca = foo();
+// printf("ca is %s\n", ca);//true it prints the value  bcs static is life time is end of the prgram thats why
+// return 0;
+// }
+// //---------------------------------------------example 14 
+// #include <stdio.h>
+// int book_ticket()
+// {
+// static int ticket_sold = 0;// the static variable cannot reset ONLY IN THE PROGRAM IT INTIALIZED ONLY ONE TIME
+// ticket_sold++;
+// return ticket_sold;
+// }
+// int main()
+// {
+// int count;
+// count = book_ticket();
+// count = book_ticket();
+// printf("Sold %d\n", count);//Initialized only once
+// //Value is remembered between function calls
+// return 0;
+// }
+//-------------------------------------------------example 15
+// #include <stdio.h>
+// int main()
+// {
+// static int i = 5;
+// if (--i)
+// {
+// main();
+// }
+// printf("i %d\n", i); //PRINTS THE i 0 five times brooo // because of the unwinding stack (back track);
+// return 0;
+// }
+//------------------------------------------------example 16 
+// #include <stdio.h>
+// int main()
+// {
+// static int i = 5;
+// if (--i)
+// {
+// return main();
+// }
+// printf("i %d\n", i);// beacuse of the return it not do any unwinding stack bro so it return at last print thew
+// return 0;
+// }
+//-----------------------------------------example 17--IMP
+
+// #include <stdio.h>
+// int foo()
+// {
+// static int i;
+// return i;
+// }
+// int main()
+// {
+// static int x = foo();//Static/global variables must be initialized with constant expressions- constant expression is that which compile time evaluate without the runn time 
+// //foo() is a function call, not a constant
+// // So this is NOT allowed in standard C(MAIN RESON IS THE IT HAS TO BE INITIALISED IN COMPILE TIME BUT WE ARE DOING IN THE RUNN TIME)
+// printf("x %d\n", x);
+// return 0;
+// }
+//----------------------------------example  18 
+// #include <stdio.h>
+// int *foo()
+// {
+// static int i = 10;
+// int *j = &i;
+// return j;
+// }
+// int main()
+// {
+// int *i;
+// i = foo();
+// printf("*i %d\n", *i);// it is right we it is the local variable so we can store that function caal in that
+// return 0;
+// }
+//------------------------------------------example 19--imp fr interview
+// #include <stdio.h>
+// int *foo()
+// {
+// int i = 100;
+// static int *j = &i;//This code causes undefined behavior because it returns a pointer to a local variable that is 
+// //destroyed after function execution, resulting in a dangling pointer.
+// return j;
+// }
+// int main()
+// {
+// int *i;
+// i = foo();
+// printf("*i %d\n", *i);
+// return 0;
+// }
+//////////////////////////////////////////////////////global variable 
+// //------------------------------example 20 
+// #include <stdio.h>
+// int x;
+// int foo()
+// {
+// printf("x %d\n", x);// prinnts 0
+// return ++x;
+// }
+// int main()
+// {
+// foo();
+// printf("x %d\n", x);// prints 1
+// return 0;
+// }
+//----------------------------------------example 22 imp 
+// #include <stdio.h>
+// register int x;//You cannot declare a global variable as register BEACAUSE IT IS stored in the CPU not in the 
+// // but we are giving it as the global variable so it is  stored in the data segment memory so error broiiiiiiiiiiiiiiiiii
+// int foo()
+// {
+// printf("x %d\n", x);
+// return ++x;
+// }
+// int main()
+// {
+// foo();
+// printf("x %d\n", x);
+// return 0;
+// }
+//---------------------------------------example 21
+// #include <stdio.h>
+// auto int x;// same here bro it is it has to store in the stack but it is storing in the global vari in the data segment so errrror 
+// int foo()
+// {
+// printf("x %d\n", x);
+// return ++x;
+// }
+// int main()
+// {
+// foo();
+// printf("x %d\n", x);
+// return 0;
+// }
+//--------------------------------example 23
 #include <stdio.h>
+auto int x;
+int foo()
+{
+printf("x %d\n", x);
+return ++x;
+}
 int main()
 {
-register int i = 0;
-scanf("%d", &i);// HERE IT IS  shows the error bcs of the Why error happens?
-// register tells the compiler:
-// 👉 “Store this variable in CPU register (not in RAM) if possible”
-// Registers do NOT have a memory address you can access
-printf("i %d\n", i);
+foo();
+printf("x %d\n", x);
 return 0;
 }
