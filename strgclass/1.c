@@ -182,7 +182,7 @@
 // {
 // int i = 100;
 // static int *j = &i;//This code causes undefined behavior because it returns a pointer to a local variable that is 
-// //destroyed after function execution, resulting in a dangling pointer.
+// //destroyed after function execution, resulting in a (dangling pointer)-THE POINTER THAT LOCATES  MEMPRY LOCATION  INVALID OR DESTROYED .
 // return j;
 // }
 // int main()
@@ -273,6 +273,20 @@
 // {
 // printf("x %d\n", x);//int x; is a tentative definition and gets ignored if a real definition already exists, but int x = 20;
 // // is a full definition, so having two such definitions causes a conflict and results in an error.
+// return 0;
+// }
+// int main()
+// {
+// foo();
+// return 0;
+// }
+//-------------------------------------------------------EXAMPLE 27;
+// #include <stdio.h>
+// static int x = 10;// we cannot do the same variable two times 
+// int x;// it is the ambiguity so throw the erroor broo as the non-static declaartion of the x follows static declartion
+// int foo()
+// {
+// printf("x %d\n", x);
 // return 0;
 // }
 // int main()
