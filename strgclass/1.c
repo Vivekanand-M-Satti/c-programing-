@@ -294,3 +294,13 @@
 // foo();
 // return 0;
 // }
+#include<stdio.h>
+void goo(char *arr)
+{
+    printf("%s",arr);
+}
+int main()
+{
+char ar[]={"hello"};
+goo(ar);
+}

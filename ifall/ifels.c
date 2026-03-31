@@ -44,4 +44,4 @@ int main()
     printf("enter the number");
     scanf("%d",&num);
     if (num%2==0)
-}
+}   
