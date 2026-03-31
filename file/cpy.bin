@@ -27,7 +27,7 @@ int main()
 {
     FILE*ptr1,*ptr2;
     ptr1=fopen("1.c","r");
-    ptr2=fopen("cpy.binna","w");
+    ptr2=fopen("cpy.bin","w");
     char ch;
     while((ch=getc(ptr1))!=EOF)
     {
