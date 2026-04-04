@@ -34,7 +34,6 @@ int main()
 //     int arr[5]={5,6,7,8,9};
 //     int size=5;
 //     print(arr,size);
-
 // }
 // #include<stdio.h>
 // void array (int arr[],int size)
