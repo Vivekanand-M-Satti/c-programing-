@@ -25,9 +25,6 @@ int main()
 //        {
 //       return 0;
 //        }
-       
-    
-
 //            int j= print(arr,size-1);
 //             printf("%d ",arr[j]);
 
