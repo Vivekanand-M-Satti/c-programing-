@@ -11,3 +11,4 @@
 //     ptr=123;
 //     printf("%d",*ptr);//Segmentation fault (core dumped)
 // }
+//
