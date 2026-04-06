@@ -7,7 +7,8 @@
 // swap the numbers by using the void pointer 
 #include<stdio.h>
 void swap(void *f,void*s,int size)
-
+{
+    
 }
 int main()
 {
