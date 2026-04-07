@@ -4,7 +4,7 @@
 int main()
 {
     char *ptr;
-    ptr=malloc();
+    ptr=calloc(6,1);
     if(ptr==NULL)
     {
         perror("Error");
