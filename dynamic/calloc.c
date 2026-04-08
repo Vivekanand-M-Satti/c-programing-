@@ -62,14 +62,34 @@
 //     return 0;
 // }
 // //#endif
+//---------------------------------strduplcate by meee---------------------
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
+void str_dup(char *str,int size)
+{
+
+    char *ptr=malloc(6*sizeof(char));
+    strcpy(ptr,str);
+    printf("%s",str);
+    free(ptr);
+
+}
 
 int main()
 {
-    char *str1=malloc(6*sizeof(char));
-    str1="hello";
     
-    char *str2=str1;
-    printf("%s",str2);
+    //char * str2="hello";
+    char *str1;
+    
+    str_dup("hello",strlen(str1));
 }
+// --------------------------------------------str_dup in the class 
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char *ptr;
+//     ptr=strdup("vivek");
+
+// }
