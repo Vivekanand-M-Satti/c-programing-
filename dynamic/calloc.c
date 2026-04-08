@@ -64,9 +64,11 @@
 // //#endif
 #include<stdio.h>
 #include<stdlib.h>
+
 int main()
 {
     char *str1=malloc(6*sizeof(char));
+    str1="hello";
     
     char *str2=str1;
     printf("%s",str2);

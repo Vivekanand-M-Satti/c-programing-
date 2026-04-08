@@ -37,12 +37,23 @@
 // }
 // }
 //
-#include <stdio.h>//hwllo mav yn madati
-int main()
-{
-   // int a;
-    int a=9,*ptr=&a;
-    ++a;
-    (*ptr)++;
-    printf("%d\t%d\t%d\t%d\t",a++,*ptr,a++,a++);
-}  
+// #include <stdio.h>//hwllo mav yn madati
+// int main()
+// {
+//    // int a;
+//     int a=9,*ptr=&a;
+//     ++a;
+//     (*ptr)++;
+//     printf("%d\t%d\t%d\t%d\t",a++,*ptr,a++,a++);
+// }  
+#include <stdio.h>
+
+int main() {
+    int a[5] = {1, 2, 3, 4, 5};
+
+    printf("%p\n", a);
+    printf("%p\n", &a[0]);
+    printf("%p\n", &a+1);
+
+    return 0;
+}
