@@ -6,5 +6,6 @@ int main()
      printf("%x\n",a|b);
       printf("%x\n",a^b);
        printf("%hhx\n",~a);
+       
 
 }
