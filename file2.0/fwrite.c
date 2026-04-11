@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    FILE *fp = fopen("data.bin", "wb");
+    FILE *fp = fopen("data.txt", "wb");
 
     int arr[5] = {10, 20, 30, 40, 50};
 
