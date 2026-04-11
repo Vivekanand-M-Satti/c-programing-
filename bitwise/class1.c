@@ -12,4 +12,3 @@ fgets(str, sizeof(str), stdin);
 printf("%s",str);
 
 
-}
