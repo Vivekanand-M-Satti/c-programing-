@@ -103,7 +103,7 @@ int main()
             
         }
         printf("\n");
-    }
+    
 
         //printf("%d\n",s1);    
     
