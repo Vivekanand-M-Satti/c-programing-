@@ -2,10 +2,10 @@
 #if 1
 int main()
 {
-    float option=24;
-    switch((int)(option))
+    int option=-1;
+    switch((option))
     {
-    case 24:
+    case -1:
     printf("hi");
     break;
     case 3:
