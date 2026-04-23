@@ -2,7 +2,7 @@
 #if 1
 int main()
 {
-    int option=-1;
+    unsigned  option=-1;
     switch((option))
     {
     case -1:
@@ -10,7 +10,7 @@ int main()
     break;
     case 3:
     printf("mav");
-    continue;
+    
     }
 
 }
