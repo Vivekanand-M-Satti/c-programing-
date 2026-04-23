@@ -18,19 +18,33 @@
 //     printf("Float: %f\n", num1);
 //     return 0;
 // }
-#include<stdio.h>
-#include<stdlib.h>
-int main(int a,char *ar[])
-{
-    if(a==1)
-    {
-        return 1;
-    }
-    float sum=0;
-    for(int i=0;i<a;i++)
-    {
-        sum+=atoi(ar[i]);
-    }
-    printf("Average %f",sum/(a-1));
+// #include<stdio.h>
+// #include<stdlib.h>
+// int main(int a,char *ar[])
+// {
+//     if(a==1)
+//     {
+//         return 1;
+//     }
+//     float sum=0;
+//     for(int i=0;i<a;i++)
+//     {
+//         sum+=atoi(ar[i]);
+//     }
+//     printf("Average %f",sum/(a-1));
     
+// }
+#include <stdio.h>
+
+int main(int argc, char *argv[], char *envp[])
+{
+    int i = 0;
+
+    while (envp[i] != NULL)
+    {
+        printf("%s\n", envp[i]);
+        i++;
+    }
+
+    return 0;
 }
