@@ -1,11 +1,8 @@
-#include <stdio.h>
-int add(int num1, int num2)
-{
-return num1 + num2;
-}
+#include<stdio.h>
+#include<stdlib.h>
 int main()
 {
-printf("%p\n", add);
-printf("%p\n", &add);
-return 0;
+    int a=399;
+    exit(90);
+    printf("hello");
 }
