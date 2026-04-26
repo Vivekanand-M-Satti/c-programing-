@@ -58,15 +58,33 @@
 //------------------------------------HW the reverse the array by using the pointer and the refcursion-----------
 // -----------------------------------which is the largest digit in the  the pointer and the refcursion------------
 //----------------------palinfrome or not ---------------------------------
+// #include<stdio.h>
+// void change_bit(char*aaa)
+// {
+//     for(int i=0;i<2;i++)
+//     {
+//         unsigned char c =aaa[i];
+//         aaa[i]=aaa[4-i-1];
+//         aaa[4-i-1]=c;
+//     }
+// }
+// int main()
+// {
+//     unsigned int a;
+//     scanf("%X",&a);
+//    //change_bit(aa); 
+//     unsigned char *aa=(unsigned char*)&a;
+//     change_bit(aa); 
+
+    
+//         printf("%x",a);
+    
+//
+
 #include<stdio.h>
-void change_bit()
 int main()
 {
-    unsigned int a;
-    scanf("%X",&a);
-    unsigned char *aa=&a;
-    for(int i=0;i<4;i++)
-    {
-        printf("%x",aa[i]);
-    }
+    int  x;
+    x=3/2.0;
+    printf("%f",x);
 }
