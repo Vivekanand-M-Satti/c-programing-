@@ -1,0 +1,97 @@
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// // Prototypes first
+// int sa(const void *a, const void *b);
+// int sd(const void *a, const void *b);
+// void print(int *a, unsigned int size);
+
+// int main()
+// {
+//     int a[5] = {9, 2, 6, 1, 7};
+
+//     qsort(a, 5, sizeof(int), sa);
+//     printf("Ascending: ");
+//     print(a, 5);
+
+//     qsort(a, 5, sizeof(int), sd);
+//     printf("Descending: ");
+//     print(a, 5);
+
+//     return 0;
+// }
+
+// // For ascending: return negative if a<b, 0 if equal, positive if a>b
+// int sa(const void *a, const void *b)
+// {
+//     int x = *(const int *)a;
+//     int y = *(const int *)b;
+//     return x - y; // or: (x > y) - (x < y) to avoid overflow
+// }
+
+// // For descending: flip the sign
+// int sd(const void *a, const void *b)
+// {
+//     int x = *(const int *)a;
+//     int y = *(const int *)b;
+//     return y - x; // reverse of ascending
+// }
+
+// void print(int *a, unsigned int size)
+// {
+//     for (unsigned int i = 0; i < size; i++)
+//         printf("%d ", a[i]);
+//     printf("\n");
+// }
+#include <stdio.h>
+#include <stdlib.h>
+
+// Prototypes
+int ascend_double(const void *a, const void *b);
+int descend_double(const void *a, const void *b);
+void print_double(double *arr, unsigned int size);
+
+int main()
+{
+    double arr[] = {9.1, 2.5, 6.7, 1.3, 7.9, 2.5};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    qsort(arr, n, sizeof(double), ascend_double);
+    printf("Ascending: ");
+    print_double(arr, n);
+
+    qsort(arr, n, sizeof(double), descend_double);
+    printf("Descending: ");
+    print_double(arr, n);
+
+    return 0;
+}
+
+int ascend_double(const void *a, const void *b)
+{
+    double x = *(const double *)a;
+    double y = *(const double *)b;
+
+    if (x < y) return -1;
+    if (x > y) return 1;
+    return 0;
+    // Shorter: return (x > y) - (x < y);
+}
+
+int descend_double(const void *a, const void *b)
+{
+    double x = *(const double *)a;
+    double y = *(const double *)b;
+
+    if (x > y) return -1;
+    if (x < y) return 1;
+    return 0;
+    // Shorter: return (y > x) - (y < x);
+}
+
+void print_double(double *arr, unsigned int size)
+{
+    for (unsigned int i = 0; i < size; i++)
+        printf("%.2f ", arr[i]);
+    printf("\n");
+}
