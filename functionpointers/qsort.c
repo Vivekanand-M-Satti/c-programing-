@@ -1,3 +1,4 @@
+// -------------------------------------------------sort the int array broiiii --
 // #include <stdio.h>
 // #include <stdlib.h>
 
@@ -43,55 +44,100 @@
 //         printf("%d ", a[i]);
 //     printf("\n");
 // }
+// ---------------------------------------------------sort the double array 
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// // Prototypes
+// int ascend_double(const void *a, const void *b);
+// int descend_double(const void *a, const void *b);
+// void print_double(double *arr, unsigned int size);
+
+// int main()
+// {
+//     double arr[] = {9.1, 2.5, 6.7, 1.3, 7.9, 2.5};
+//     int n = sizeof(arr) / sizeof(arr[0]);
+
+//     qsort(arr, n, sizeof(double), ascend_double);
+//     printf("Ascending: ");
+//     print_double(arr, n);
+
+//     qsort(arr, n, sizeof(double), descend_double);
+//     printf("Descending: ");
+//     print_double(arr, n);
+
+//     return 0;
+// }
+
+// int ascend_double(const void *a, const void *b)
+// {
+//     double x = *(const double *)a;
+//     double y = *(const double *)b;
+
+//     if (x < y) return -1;
+//     if (x > y) return 1;
+//     return 0;
+//     // Shorter: return (x > y) - (x < y);
+// }
+
+// int descend_double(const void *a, const void *b)
+// {
+//     double x = *(const double *)a;
+//     double y = *(const double *)b;
+
+//     if (x > y) return -1;
+//     if (x < y) return 1;
+//     return 0;
+//     // Shorter: return (y > x) - (y < x);
+// }
+
+// void print_double(double *arr, unsigned int size)
+// {
+//     for (unsigned int i = 0; i < size; i++)
+//         printf("%.2f ", arr[i]);
+//     printf("\n");
+// }
+// -----------------------------------------------sort the string---------------------
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-// Prototypes
-int ascend_double(const void *a, const void *b);
-int descend_double(const void *a, const void *b);
-void print_double(double *arr, unsigned int size);
+// Prototypes like previous one
+int sa_string(const void *a, const void *b); // ascending
+int sd_string(const void *a, const void *b); // descending
+void print(char **a, unsigned int size);
 
 int main()
 {
-    double arr[] = {9.1, 2.5, 6.7, 1.3, 7.9, 2.5};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    char *a[5] = {"orange", "apple", "banana", "grape", "cherry"};
 
-    qsort(arr, n, sizeof(double), ascend_double);
+    qsort(a, 5, sizeof(char *), sa_string);
     printf("Ascending: ");
-    print_double(arr, n);
+    print(a, 5);
 
-    qsort(arr, n, sizeof(double), descend_double);
+    qsort(a, 5, sizeof(char *), sd_string);
     printf("Descending: ");
-    print_double(arr, n);
+    print(a, 5);
 
     return 0;
 }
 
-int ascend_double(const void *a, const void *b)
+int sa_string(const void *a, const void *b)
 {
-    double x = *(const double *)a;
-    double y = *(const double *)b;
-
-    if (x < y) return -1;
-    if (x > y) return 1;
-    return 0;
-    // Shorter: return (x > y) - (x < y);
+    const char *str1 = *(const char **)a;
+    const char *str2 = *(const char **)b;
+    return strcmp(str1, str2); // <0 if str1 < str2
 }
-
-int descend_double(const void *a, const void *b)
+int sd_string(const void *a, const void *b)
 {
-    double x = *(const double *)a;
-    double y = *(const double *)b;
-
-    if (x > y) return -1;
-    if (x < y) return 1;
-    return 0;
-    // Shorter: return (y > x) - (y < x);
+    const char *str1 = *(const char **)a;
+    const char *str2 = *(const char **)b;
+    return strcmp(str2, str1); // flip for descending
 }
 
-void print_double(double *arr, unsigned int size)
+void print(char **a, unsigned int size)
 {
     for (unsigned int i = 0; i < size; i++)
-        printf("%.2f ", arr[i]);
+        printf("%s ", a[i]);
     printf("\n");
 }
