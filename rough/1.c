@@ -82,9 +82,57 @@
 //
 
 #include<stdio.h>
+void sort(int arr[],int size)
+{
+    static int a=0;
+    int temp;
+
+    if(a==2)
+    {
+        return ;
+    }
+    for (int i=0;i<size;i++)
+    {
+        for (int j=0;j<size;j++)
+        {
+            if(a==0)
+            {
+            if(arr[i] > arr[j])
+            {
+                temp=arr[j];
+                arr[j]=arr[i];
+                arr[i]=temp;
+            }
+        }
+        if(a==1)
+            {
+            if(arr[i] < arr[j])
+            {
+                temp=arr[j];
+                arr[j]=arr[i];
+                arr[i]=temp;
+            }
+        }
+        }
+    }
+     for(int i=0;i<size;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    printf("\n");
+    a++;
+    sort(arr,size);
+    
+
+}
 int main()
 {
     int  x;
-    x=3/2.0;
-    printf("%f",x);
+    int size;scanf("%d",&size);
+    int arr[size];
+    for(int i=0;i<size;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    sort(arr,size);
 }
