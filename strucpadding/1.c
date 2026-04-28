@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#pragma pack(1)
 struct Student
 {
 char ch1;
