@@ -73,6 +73,7 @@ int main()
     return 0;
 }
 #endif 
+#if 0
 #include <stdio.h>
 #define WARN_IF(EXP) \
 do \
@@ -89,3 +90,4 @@ int x = 5;
 WARN_IF(x == 0);
 return 0;
 }
+#endif
