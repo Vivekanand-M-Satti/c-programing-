@@ -91,3 +91,9 @@ WARN_IF(x == 0);
 return 0;
 }
 #endif
+#include<stdio.h>
+#define himav  main
+int himav()
+{
+    printf("hello world");
+}
