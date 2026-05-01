@@ -145,9 +145,9 @@ void print(char **a, unsigned int size)
     #endif
     #include<stdio.h>
     #include<stdlib.h>
-    int cm(int *p,int *p2)
+    int cm(void *p,void *p2)
     {
-        return p-p2;
+        return *(int *)p-*(int*)p2;
 
     }
     int main()
