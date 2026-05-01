@@ -98,6 +98,7 @@
 //     printf("\n");
 // }
 // -----------------------------------------------sort the string---------------------
+#if 0
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -141,3 +142,20 @@ void print(char **a, unsigned int size)
         printf("%s ", a[i]);
     printf("\n");
 }
+    #endif
+    #include<stdio.h>
+    #include<stdlib.h>
+    int cm(int *p,int *p2)
+    {
+        return p-p2;
+
+    }
+    int main()
+    {
+        int ar[6]={5,4,3,6,22,4};
+        qsort(ar,6,sizeof(int),cm);
+        for(int i=0;i<6;i++)
+        {
+            printf("%d",ar[i]);
+        }
+    }
