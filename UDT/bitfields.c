@@ -1,7 +1,7 @@
 #include<stdio.h>
 struct Nibble
 {
-unsigned int lower : 33;
+unsigned int lower : 32;
 unsigned int upper : 10;
 };
 int main()
