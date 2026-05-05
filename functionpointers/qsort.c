@@ -145,9 +145,9 @@ void print(char **a, unsigned int size)
     #endif
     #include<stdio.h>
     #include<stdlib.h>
-    int cm(void *p,void *p2)
+    int cm(const void *p,const void *p2)
     {
-        return *(int *)p-*(int*)p2;
+        return *(int *)p<*(int*)p2;
 
     }
     int main()
@@ -156,6 +156,6 @@ void print(char **a, unsigned int size)
         qsort(ar,6,sizeof(int),cm);
         for(int i=0;i<6;i++)
         {
-            printf("%d",ar[i]);
+            printf("%d ",ar[i]);
         }
     }
