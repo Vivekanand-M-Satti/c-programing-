@@ -21,8 +21,27 @@ char upper : 4;
 };
 int main()
 {
-struct Nibble nibble = {0x02, 0x0A};
+struct Nibble nibble;
 printf("%#o\n", nibble.upper);
 printf("%#x\n", nibble.lower);
+printf("%zu",sizeof(nibbl));
 return 0;
 }
+
+
+
+#if 0
+struct Nibble
+{
+unsigned lower : 4;
+unsigned upper : 4;
+};
+int main()
+{
+struct Nibble nibbl;
+//printf("%#o\n", nibble.upper);
+//printf("%#x\n", nibble.lower);
+printf("%zu",sizeof(nibbl));
+return 0;
+}
+#endif
