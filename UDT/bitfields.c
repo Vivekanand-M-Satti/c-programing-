@@ -14,6 +14,7 @@ printf("%zu",sizeof(struct Nibble));
 return 0;
 }
 #endif
+#if 0
 struct Nibble
 {
 char lower : 4;
@@ -24,10 +25,10 @@ int main()
 struct Nibble nibble;
 printf("%#o\n", nibble.upper);
 printf("%#x\n", nibble.lower);
-printf("%zu",sizeof(nibbl));
+//printf("%zu",sizeof(nibbl));
 return 0;
 }
-
+#endif
 
 
 #if 0
@@ -45,3 +46,19 @@ printf("%zu",sizeof(nibbl));
 return 0;
 }
 #endif
+
+struct Nibble
+{
+char lower : 4;
+char upper : 4;
+};
+int main()
+{
+struct Nibble nibble;
+nibble.lower=0x0A;
+nibble.upper=0x02;
+printf("%d\n", nibble.upper);
+printf("%d\n", nibble.lower);
+printf("%zu",sizeof(nibble));
+return 0;
+}
