@@ -1,4 +1,4 @@
-#include<stdio.h>
+// #include<stdio.h>
 #if 0
 union mav
 {
@@ -16,6 +16,7 @@ int main()
     printf("%d\n %f\n %d\n",m.a,m.b,m.c);
 }
     #endif
+    #if 0
     union mav
 {
     char o;
@@ -29,4 +30,17 @@ int main()
     m.i=0x1234;
     m.o='1';
     printf("%lf\n %d\n %c\n",m.h,m.i,m.o);
+}
+#endif
+#include<stdio.h>
+union Endian
+{
+unsigned int vlaue;
+unsigned char byte[4];
+};
+int main()
+{
+union Endian e = {0x12345678};
+e.byte[0] == 0x78 ? printf("Little\n") : printf("Big\n");
+return 0;
 }
