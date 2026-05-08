@@ -1,12 +1,11 @@
 #include<stdio.h>
 
-volatile int x = 1;
+
 
 int main()
 {
-    while(x == 10)
-    {
-    }
-
-    printf("x changed");
+    int num1;
+    volatile int  num2=1;
+    num1=++num2 + num2++ + num2++ +num2++;
+    printf("%d\n",num1);
 }
