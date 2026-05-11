@@ -4,6 +4,7 @@
 int main()
 {
     char str[20], str2[10];
+    
     int str3[10];  
     scanf("%s", str);
 
