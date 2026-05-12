@@ -139,18 +139,15 @@
  #include<stdio.h>
  int main()
  {
-    int a=9;
-    switch (a*9)
+    int n,num=1;
+    scanf("%d",&n);
+    for (int i=1;i<n;i++)
     {
-    case 81:
-        printf("mav");
-        break;
-    
-    default:
-        break;
+        for(int j=1;j<=i;j++)
+        {
+            printf("%d ",num++);
+        }
+        printf("\n");
     }
- }
-
- {
     
  }
