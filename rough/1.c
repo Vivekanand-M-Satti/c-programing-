@@ -136,18 +136,37 @@
 //     }
 //     sort(arr,size);
 // }
- #include<stdio.h>
- int main()
- {
-    int n,num=1;
-    scanf("%d",&n);
-    for (int i=1;i<n;i++)
-    {
-        for(int j=1;j<=i;j++)
-        {
-            printf("%d ",num++);
-        }
-        printf("\n");
-    }
+//  #include<stdio.h>
+//  int main()
+//  {
+//     int n,num=1;
+//     scanf("%d",&n);
+//     for (int i=1;i<n;i++)
+//     {
+//         for(int j=1;j<=i;j++)
+//         {
+//             printf("%d ",num++);
+//         }
+//         printf("\n");
+//     }
     
- }
+//  }
+#include <stdio.h>
+
+int main()
+{
+    int i = 0;
+
+    i++;
+
+    if(i <= 4)
+    {
+        printf("Emertxe");
+
+        return;
+
+        main();
+    }
+
+    return 0;
+}
