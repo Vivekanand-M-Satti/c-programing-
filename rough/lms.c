@@ -7,7 +7,7 @@ void print(int *number)
 
 void main()
 {
-    int i = 0;
+    int i = 999999;
 
     print(i++);
 }
