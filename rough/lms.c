@@ -1,13 +1,16 @@
 // 
+#include<stdio.h>
 
-void print(int *number)
+  print(int number)
 {
-    printf("%d", *number);
+    printf("%d", number);
+    return 89;
 }
 
 void main()
 {
     int i = 999999;
 
-    print(i++);
+    int k=print(i++);
+     printf("%d", k);
 }
