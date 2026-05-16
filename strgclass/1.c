@@ -294,13 +294,64 @@
 // foo();
 // return 0;
 // }
-#include<stdio.h>
-void goo(char *arr)
-{
-    printf("%s",arr);
-}
+// #include <stdio.h>
+// int *foo()
+// {
+// int i = 10;
+// int *j = &i;
+// return j;
+// }
+// int main()
+// {
+// int *i;
+// i = foo();
+// printf("*i %d\n", *i);
+// return 0;
+// }
+// #include <stdio.h>
+// int book_ticket()
+// {
+// int ticket_sold = 0;
+// ticket_sold++;
+// return ticket_sold;
+// }
+// int main()
+// {
+// int count;
+// count = book_ticket();
+// count = book_ticket();
+// printf("Sold %d\n", count);
+// return 0;
+// }
+// #include <stdio.h>
+// int main()
+// {
+// int i = 0;
+// {
+// int j = 0;
+// printf("i %d\n", i);
+// }
+// printf("j %d\n", j);
+// return 0;
+// }
+// #include <stdio.h>
+// static int i = 10;
+// i=99;
+// int main()
+// {
+// int j=100;
+ 
+// printf("*i %d\n", i);// true it prints the value  bcs static is life time is end of the prgram thats why
+// return 0;
+// }
+#include <stdio.h>
 int main()
 {
-char ar[]={"hello"};
-goo(ar);
+int i = 5;
+if (--i)
+{
+return main();
+}
+printf("i %d\n", i);
+return 0;
 }
