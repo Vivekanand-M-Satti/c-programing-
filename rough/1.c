@@ -179,6 +179,7 @@ int main()
 //     200;
 //     printf("%d",10);
 // }
+#if 0
 #include<stdio.h>
 
 int main()
@@ -186,9 +187,100 @@ int main()
      int x = 5,*y;
      y=&x;
 
-    switch(5)
+    
+   scanf("hi mav %d",&x);
+}
+   #include<stdio.h>
+   int main()
+{
+    char *s = "myworld";
+    int i = 7;
+
+    printf("%s*", i, s);
+}
+    
+
+   #include <stdio.h>
+#include <string.h>
+int i=99;
+
+int main()
+{
+static int i;
+int i;
+
+    { 
+        int i=89;
+    printf("%d",i);
+}
+
+    
+    printf("%d",i);
+
+    return 0;
+}
+    
+#include<stdio.h>
+ struct simp
     {
-        case *y:   // ERROR
-            printf("hello");
-    }
+        int i;
+        char city[];
+    };
+
+   int main()
+{
+   
+    struct simp s1;
+
+    printf("%d", s1.i);
+    printf("%s", s1.city);
+
+    return 0;
+}
+    #endif
+// #include<stdio.h>
+//     int a = 52;
+
+// int main()
+// {
+//     const extern int a;
+
+//     printf("%d\n", a);
+// }
+// #include<stdio.h>
+// int a = 52;           // Global variable 'a' = 52
+
+// int main() {
+//      int a;
+//      scanf("%i",&a) ;  // Declares 'a' as a reference to the external (global) 'a'
+//     printf("%i\n", a);    // Prints global 'a'
+// }
+// #include <stdio.h>
+
+// #pragma pack(8)
+
+// struct st
+// {
+//     char y;
+//     double x;
+//     char y1;
+// };
+
+// int main()
+// {
+//     printf("%zu", sizeof(struct st));
+
+//     return 0;
+// }
+#include <stdio.h>
+
+int main()
+{
+    char str1[] = "Hello";
+    char str2 []= "Hello";
+
+    if (str1 == str2)
+        printf("Both are same\n");
+    else
+        printf("Both are different\n");
 }
