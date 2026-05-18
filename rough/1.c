@@ -151,6 +151,7 @@
 //     }
     
 //  }
+#if 0
 #include <stdio.h>
 
 int main()
@@ -169,4 +170,25 @@ int main()
     }
 
     return 0;
+}
+    #endif 
+
+//     #include<stdio.h>
+// int main()
+// {
+//     200;
+//     printf("%d",10);
+// }
+#include<stdio.h>
+
+int main()
+{
+     int x = 5,*y;
+     y=&x;
+
+    switch(5)
+    {
+        case *y:   // ERROR
+            printf("hello");
+    }
 }
