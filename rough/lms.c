@@ -70,9 +70,5 @@ int reverse(int no)
 
 int main()
 {
-    int no = 5;
-
-    reverse(no);
-
-    return 0;
+    
 }

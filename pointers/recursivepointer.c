@@ -114,3 +114,21 @@ int main()
 
     
 // }
+#include<stdio.h>
+
+int call(int i)
+{
+    if(i==0)
+    {
+    return 0;
+    }
+    
+   
+    call( i/2);
+   printf("%d ",i%2);
+
+}
+int main()
+{
+    call(127);
+}
