@@ -274,13 +274,27 @@ int i;
 // }
 #include <stdio.h>
 
+union mav
+{
+    unsigned int a : 8;
+    unsigned int b : 4;
+    unsigned int c : 4;
+};
+
 int main()
 {
-    char str1[] = "Hello";
-    char str2 []= "Hello";
+    union mav m;
+    unsigned int temp;
 
-    if (str1 == str2)
-        printf("Both are same\n");
-    else
-        printf("Both are different\n");
+    scanf("%x", &temp);
+
+    m.a = temp;
+
+    unsigned int low = m.b;   // lower 4 bits
+    m.b = m.c;                // copy upper nibble to lower
+    m.c = low;                // copy lower nibble to upper
+
+    printf("%X", m.a);
+
+    return 0;
 }
