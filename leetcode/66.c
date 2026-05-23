@@ -21,7 +21,6 @@ int* plusOne(int* digits, int digitsSize)
     digits = malloc ((digitsSize)*sizeof(int));
     digits[digitsSize-2]=1,digits[digitsSize-1]=0;
     }
-    
     else
     {
     digits = malloc (digitsSize*sizeof(int));
@@ -32,7 +31,5 @@ int* plusOne(int* digits, int digitsSize)
     {
         printf("%d ",digits[i]);
     }
-
-    
     
 }

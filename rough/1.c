@@ -277,22 +277,16 @@ int i;
 union mav
 {
     unsigned int a : 8;
-    unsigned int b : 4;
-    unsigned int c : 4;
+    unsigned char b[2] :8;
 };
 
 int main()
 {
     union mav m;
-    unsigned int temp;
+    unsigned char tm;
 
-    scanf("%x", &temp);
-
-    m.a = temp;
-
-    unsigned int low = m.b;   // lower 4 bits
-    m.b = m.c;                // copy upper nibble to lower
-    m.c = low;                // copy lower nibble to upper
+    scanf("%x", &tm);
+     tm         
 
     printf("%X", m.a);
 
