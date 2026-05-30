@@ -272,23 +272,35 @@ int i;
 
 //     return 0;
 // }
-#include <stdio.h>
+// #include <stdio.h>
 
-union mav
-{
-    unsigned int a : 8;
-    unsigned char b[2] :8;
-};
+// union mav
+// {
+//     unsigned int a : 8;
+//     unsigned char b[2] :8;
+// };
 
+// int main()
+// {
+//     union mav m;
+//     unsigned char tm;
+
+//     scanf("%x", &tm);
+//      tm         
+
+//     printf("%X", m.a);
+
+//     return 0;
+// }
+
+#include<stdio.h>
+#include<stdlib.h>
 int main()
 {
-    union mav m;
-    unsigned char tm;
-
-    scanf("%x", &tm);
-     tm         
-
-    printf("%X", m.a);
-
-    return 0;
+    int a=-9;
+    if(!a)
+    {
+        printf("mav");
+    }
+    printf("%d",abs(a));
 }
