@@ -293,14 +293,28 @@ int i;
 //     return 0;
 // }
 
+// #include<stdio.h>
+// #include<stdlib.h>
+// int main()
+// {
+//     int a=-9;
+//     if(!a)
+//     {
+//         printf("mav");
+//     }
+//     printf("%d",abs(a));
+// }
 #include<stdio.h>
-#include<stdlib.h>
 int main()
 {
-    int a=-9;
-    if(!a)
-    {
-        printf("mav");
-    }
-    printf("%d",abs(a));
+    int i = 10;
+
+    goto label2;
+
+    while(i)
+        switch(i - 1)
+            case 1:
+
+label2:
+    printf("%d\n", i);
 }
