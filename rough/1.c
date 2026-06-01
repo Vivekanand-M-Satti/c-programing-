@@ -335,5 +335,5 @@ int i;
 int main()
 {
     int i=0;
-    u8 *k=&i;
+    uint8_t *k=&i;
 }
