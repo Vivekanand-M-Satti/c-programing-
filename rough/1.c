@@ -304,17 +304,36 @@ int i;
 //     }
 //     printf("%d",abs(a));
 // }
+// #include<stdio.h>
+// #include<stdlib.h>
+// struct node{
+//     int data;
+//     struct node*link;
+// };
+// int main()
+// {
+//     struct node* head=(struct node*)malloc (sizeof(struct node));
+//     head->data=5;
+//     struct node* scnd=(struct node*)malloc (sizeof(struct node));
+//     head->link=scnd;
+//     scnd->data=9;
+//     struct node* rd=(struct node*)malloc (sizeof(struct node));
+//     scnd->link=rd;
+//     rd->data-90;
+//     rd->link=NULL;
+//        // Test: print the list
+//     struct node *temp = head;
+//     while (temp != NULL) {
+//         printf("%d -> ", temp->data);
+//         temp = temp->link;
+//     }
+//     printf("NULL\n");
+
+//  }
 #include<stdio.h>
+#include<stdint.h>
 int main()
 {
-    int i = 10;
-
-    goto label2;
-
-    while(i)
-        switch(i - 1)
-            case 1:
-
-label2:
-    printf("%d\n", i);
+    int i=0;
+    u8 *k=&i;
 }
