@@ -330,10 +330,19 @@ int i;
 //     printf("NULL\n");
 
 //  }
-#include<stdio.h>
-#include<stdint.h>
+// #include<stdio.h>
+// #include<stdint.h>
+// int main()
+// {
+//     int i=0;
+//     uint8_t *k=&i;
+// }
+#include <stdio.h>
+
 int main()
 {
-    int i=0;
-    uint8_t *k=&i;
+    int x = 5;
+
+    int y=(x++,x);
+    printf("%d",y);
 }
