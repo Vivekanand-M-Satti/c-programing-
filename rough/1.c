@@ -259,7 +259,7 @@ int i;
 
 // #pragma pack(8)
 
-// struct st
+ struct st
 // {
 //     char y;
 //     double x;
