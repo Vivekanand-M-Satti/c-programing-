@@ -265,7 +265,6 @@ int i;
 //     double x;
 //     char y1;
 // };
-
 // int main()
 // {
 //     printf("%zu", sizeof(struct st));
